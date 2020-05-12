@@ -10,7 +10,6 @@ cards:
     entities:
       - entity: switch.blitzwolf_1
       - entity: binary_sensor.blitzwolf_1_button1
-      - entity: sensor.blitzwolf_1_energy_apparent_power
       - entity: sensor.blitzwolf_1_energy_current
       - entity: sensor.blitzwolf_1_energy_factor
       - entity: sensor.blitzwolf_1_energy_power
