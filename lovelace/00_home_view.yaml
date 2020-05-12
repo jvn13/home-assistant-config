@@ -1,0 +1,13 @@
+title: Home
+id: Home
+icon: mdi:home
+cards:
+  - type: entities
+    show_header_toggle: false
+    title: Lichten
+    entities:
+      - entity: switch.living
+        name: Woonkamer
+        icon: mdi:lightbulb
+      - entity: light.desk_jelle
+        name: Bureau Jelle

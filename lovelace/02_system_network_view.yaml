@@ -1,0 +1,14 @@
+title: System & Network
+id: system_network
+icon: mdi:server-network
+cards:
+  - type: entities
+    title: System
+    show_header_toggle: false
+    entities:
+      - entity: sensor.processor_use
+        name: Processor gebruik
+      - entity: sensor.memory_free
+        name: Vrij geheugen
+      - entity: sensor.last_boot
+        name: Laaste boot

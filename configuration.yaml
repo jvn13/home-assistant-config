@@ -1,0 +1,42 @@
+homeassistant:
+  name: Huis
+  latitude: !secret lat_coord
+  longitude: !secret long_coord
+  elevation: 0
+  time_zone: !secret time_zone
+  unit_system: metric
+  packages: !include_dir_named packages
+
+# Configure a default setup of Home Assistant (frontend, api, etc)
+default_config:
+
+# Uncomment this if you are using SSL/TLS, running in Docker container, etc.
+http:
+  base_url: !secret base_url
+  ssl_certificate: /ssl/fullchain.pem
+  ssl_key: /ssl/privkey.pem
+  # ip_ban_enabled: true
+  # login_attempts_threshold: 3
+
+lovelace:
+  mode: yaml
+
+frontend:
+  themes: !include_dir_merge_named themes
+
+binary_sensor:
+  - platform: workday
+    country: !secret country_code
+
+discovery:
+  ignore:
+    - yeelight
+
+# Text to speech
+tts:
+  - platform: google_translate
+
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
