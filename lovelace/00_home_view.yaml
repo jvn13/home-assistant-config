@@ -11,3 +11,5 @@ cards:
         icon: mdi:lightbulb
       - entity: light.desk_jelle
         name: Bureau Jelle
+      - entity: light.toilet
+        name: WC
