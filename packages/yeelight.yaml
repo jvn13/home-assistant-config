@@ -2,3 +2,5 @@ yeelight:
   devices:
     192.168.1.159:
       name: Desk Jelle
+    192.168.1.40:
+      name: Toilet
