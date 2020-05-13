@@ -38,3 +38,26 @@
       data_template:
         title: "Weekend lights off"
         message: "Event triggered has been triggered with following value: {{ now().weekday() }}"
+
+- alias: "Tasmota power state on HA start-up"
+  initial_state: true
+  trigger:
+    platform: homeassistant
+    event: start
+  action:
+    ## For manually configured devices
+    - service: mqtt.publish
+      data:
+        topic: "cmnd/tasmotas/state"
+        payload: ""
+    - service: mqtt.publish
+      data:
+        topic: cmnd/tasmotas/POWER
+    ## For autodiscovered devices
+    - service: mqtt.publish
+      data:
+        topic: "tasmotas/cmnd/state"
+        payload: ""
+    - service: mqtt.publish
+      data:
+        topic: tasmotas/cmnd/POWER
