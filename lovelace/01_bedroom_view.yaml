@@ -2,23 +2,27 @@ title: Automatiseringen
 id: automations
 icon: mdi:bed-empty
 cards:
-  - type: light
-    entity: light.desk_jelle
-  - type: entities
-    show_header_toggle: false
-    title: Workstation Jelle
-    entities:
-      - entity: switch.blitzwolf_1
-      - entity: sensor.blitzwolf_1_energy_current
-      - entity: sensor.blitzwolf_1_energy_factor
-      - entity: sensor.blitzwolf_1_energy_power
-      - entity: sensor.blitzwolf_1_energy_reactivepower
-      - entity: sensor.blitzwolf_1_energy_totalstarttime
-      - entity: sensor.blitzwolf_1_energy_voltage
-      - entity: sensor.blitzwolf_1_status
-  - type: history-graph
-    title: Verbruik
-    entities:
-      - sensor.blitzwolf_1_energy_total
-      - sensor.blitzwolf_1_energy_yesterday
-      - sensor.blitzwolf_1_energy_today
+  type: custom:layout-card
+  cards:
+    - type: light
+      entity: light.desk_jelle
+    - type: entity
+      entity: sensor.blitzwolf_1_energy_voltage
+    - type: entity
+      entity: sensor.blitzwolf_1_energy_current
+    - type: entities
+      show_header_toggle: false
+      title: Workstation Jelle
+      entities:
+        - entity: switch.blitzwolf_1
+        - entity: sensor.blitzwolf_1_energy_factor
+        - entity: sensor.blitzwolf_1_energy_power
+        - entity: sensor.blitzwolf_1_energy_reactivepower
+        - entity: sensor.blitzwolf_1_energy_totalstarttime
+        - entity: sensor.blitzwolf_1_status
+    - type: history-graph
+      title: Verbruik
+      entities:
+        - sensor.blitzwolf_1_energy_total
+        - sensor.blitzwolf_1_energy_yesterday
+        - sensor.blitzwolf_1_energy_today
