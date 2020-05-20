@@ -1,7 +1,5 @@
 resources:
-  #!include lovelace/resources/resources.yaml
-  - url: /local/layout-card.js
-    type: module
+  !include lovelace/resources/resources.yaml
 
 title: Thuis
 views:
