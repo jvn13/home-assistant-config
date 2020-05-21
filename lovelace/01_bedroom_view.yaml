@@ -1,6 +1,7 @@
 title: Automatiseringen
 id: automations
 icon: mdi:bed-empty
+panel: true
 cards:
   - type: custom:layout-card
     cards:
