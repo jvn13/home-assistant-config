@@ -1,8 +1,8 @@
 resources:
   !include lovelace/resources/resources.yaml
 
-#custom_header:
-#  !include lovelace/custom_header/configuration.yaml
+custom_header:
+  !include lovelace/custom_header/configuration.yaml
 
 title: Thuis
 views:

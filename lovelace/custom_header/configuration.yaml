@@ -1,6 +1,6 @@
-# shadow: false
-# compact_mode: true
-# hide_unused: true
+shadow: false
+compact_mode: true
+hide_unused: true
 
 # show_tabs: 'Home, bedroom'
 # hidden_tab_redirect: false
