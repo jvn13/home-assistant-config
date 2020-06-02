@@ -13,3 +13,5 @@ cards:
         name: Bureau Jelle
       - entity: light.toilet
         name: WC
+      - entity: switch.custom_build_light
+        name: Lamp
