@@ -1,0 +1,17 @@
+title: Security
+id: security
+icon: mdi:security
+panel: true
+cards:
+  - type: custom:layout-card
+    cards:
+      - type: entities
+        title: Beweging
+        show_header_toggle: false
+        entities:
+          - entity: binary_sensor.movementbathroom_occupancy
+      - type: entities
+        title: Ramen en deuren
+        show_header_toggle: false
+        entities:
+          - entity: binary_sensor.windowjelle_contact

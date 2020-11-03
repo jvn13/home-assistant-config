@@ -27,7 +27,6 @@ frontend:
 binary_sensor:
   - platform: workday
     country: !secret country_code
-
 discovery:
   ignore:
     - yeelight

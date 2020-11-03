@@ -6,7 +6,19 @@
     offset: "-00:05:00"
   action:
     service: switch.turn_on
-    entity_id: switch.living
+    entity_id: switch.livinglight
+    
+- alias: Turn lights on when it gets to dark
+  trigger:
+    platform: numeric_state
+    entity_id: sensor.0x04cf8cdf3c78e197_illuminance_lux
+    below: 7
+  condition:
+    condition: time
+    before: '22:59:00'
+  action:
+    service: switch.turn_on
+    entity_id: switch.livinglight
 
 - alias: Turn lights off during week days
   trigger:
@@ -21,7 +33,7 @@
         entity_id: automation.turn_lights_off_during_weekend
         state: 'off'
   action:
-    entity_id: switch.living
+    entity_id: switch.livinglight
     service: switch.turn_off
 
 - alias: Turn lights off during weekend
@@ -33,7 +45,7 @@
       value_template: '{{ now().weekday() > 3 }}'
   action:
     - service: switch.turn_off
-      entity_id: switch.living
+      entity_id: switch.livinglight
     - service: notify.mobile_app_hd1913
       data_template:
         title: "Weekend lights off"

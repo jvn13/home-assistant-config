@@ -8,5 +8,6 @@ title: Thuis
 views:
   - !include lovelace/00_home_view.yaml
   - !include lovelace/01_bedroom_view.yaml
-  - !include lovelace/02_system_network_view.yaml
-  - !include lovelace/03_settings_view.yaml
+  - !include lovelace/02_security_view.yaml
+  - !include lovelace/03_system_network_view.yaml
+  - !include lovelace/04_settings_view.yaml

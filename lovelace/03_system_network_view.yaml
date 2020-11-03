@@ -1,0 +1,24 @@
+title: System & Network
+id: system_network
+icon: mdi:server-network
+cards:
+  - type: custom:layout-card
+    cards:
+      - type: entities
+        title: System
+        show_header_toggle: false
+        entities:
+          - entity: sensor.processor_use
+            name: Processor gebruik
+          - entity: sensor.memory_free
+            name: Vrij geheugen
+          - entity: sensor.last_boot
+            name: Laaste boot
+      - type: entities
+        title: Sensors
+        show_header_toggle: false
+        entities:
+          - entity: sensor.hue_dimmer_battery
+          - entity: sensor.windowjelle_battery
+          - entity: sensor.movementbathroom_battery
+          - entity: sensor.light_sensor_battery

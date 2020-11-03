@@ -2,16 +2,18 @@ title: Home
 id: Home
 icon: mdi:home
 cards:
-  - type: entities
-    show_header_toggle: false
-    title: Lichten
-    entities:
-      - entity: switch.living
-        name: Woonkamer
-        icon: mdi:lightbulb
-      - entity: light.desk_jelle
-        name: Bureau Jelle
-      - entity: light.toilet
-        name: WC
-      - entity: switch.custom_build_light
-        name: Lamp
+  - type: custom:layout-card
+    cards:
+      - type: entities
+        show_header_toggle: false
+        title: Lichten
+        entities:
+          - entity: switch.livinglight
+            name: Woonkamer
+            icon: mdi:lightbulb
+          - entity: light.desk_jelle_light
+            name: Bureau Jelle
+          - entity: light.desk_jelle
+            name: Yeelight bureau
+        #   - entity: light.toilet
+        #     name: WC
